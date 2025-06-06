@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT Subscription Manager</title>
+    
+    <!-- Externe Bibliotheken -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Eigen Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Foutmelding-banner (wordt door JS getoond) -->
+    <div id="error-banner" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 text-center" role="alert">
+        <p class="font-bold">Verbindingsfout</p>
+        <p>Kon geen verbinding maken met de server. De applicatie draait nu met lokale demogegevens.</p>
+    </div>
+    
+    <!-- Notificatie-container (wordt door JS gevuld) -->
+    <div id="toast-container"></div>
+
+    <!-- Hoofdstructuur van de applicatie -->
+    <div class="flex h-screen">
+        <!-- Vaste Navigatiebalk -->
+        <nav class="w-64 bg-slate-800 text-white flex flex-col flex-shrink-0">
+            <div class="p-5 text-2xl font-bold border-b border-slate-700"><i class="fas fa-cogs mr-2"></i>SIT Manager</div>
+            <ul id="nav-menu" class="flex-grow">
+                <li><a href="#dashboard" class="nav-link flex items-center p-4 hover:bg-slate-700"><i class="fas fa-tachometer-alt w-8"></i>Dashboard</a></li>
+                <li><a href="#klanten" class="nav-link flex items-center p-4 hover:bg-slate-700"><i class="fas fa-users w-8"></i>Klanten</a></li>
+                <li><a href="#producten" class="nav-link flex items-center p-4 hover:bg-slate-700"><i class="fas fa-box-open w-8"></i>Producten</a></li>
+                <li><a href="#facturatie" class="nav-link flex items-center p-4 hover:bg-slate-700"><i class="fas fa-file-invoice-dollar w-8"></i>Facturatie</a></li>
+                <li><a href="#instellingen" class="nav-link flex items-center p-4 hover:bg-slate-700"><i class="fas fa-sliders-h w-8"></i>Instellingen</a></li>
+            </ul>
+            <div class="p-4 border-t border-slate-700"><p class="text-sm">Ingelogd als: Admin</p><a href="#" class="text-sm text-red-400 hover:text-red-300">Uitloggen</a></div>
+        </nav>
+
+        <!-- Hoofdcontent (wordt door JS gevuld) -->
+        <main id="main-content" class="flex-1 p-8 overflow-y-auto">
+            <div class="text-center text-slate-500"><i class="fas fa-spinner fa-spin fa-2x"></i><p class="mt-2">Applicatie laden...</p></div>
+        </main>
+    </div>
+
+    <!-- Modal-container (wordt door JS gevuld) -->
+    <div id="modal-container"></div>
+
+    <!-- Het brein van de applicatie -->
+    <script src="js/app.js"></script>
+</body>
+</html>
