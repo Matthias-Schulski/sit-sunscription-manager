@@ -1,7 +1,51 @@
+<!-- De productenpagina, nu met tabs en paginatie-container. -->
 <div class="page-content">
-    <div class="flex justify-between items-center mb-6"><h1 class="text-3xl font-bold text-slate-800">Productcatalogus</h1><button data-action="open-product-modal" class="bg-slate-800 text-white font-bold py-2 px-4 rounded-lg hover:bg-slate-700 flex items-center"><i class="fas fa-plus mr-2"></i>Nieuw Product</button></div>
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold text-slate-800">Productcatalogus</h1>
+        <button data-action="open-product-modal" class="bg-slate-800 text-white font-bold py-2 px-4 rounded-lg hover:bg-slate-700 flex items-center">
+            <i class="fas fa-plus mr-2"></i>Nieuw Product
+        </button>
+    </div>
+
+    <!-- Tabs voor Abonnementen en Eenmalige producten -->
+    <div class="mb-4 border-b border-gray-200">
+        <nav id="product-type-tabs" class="flex space-x-8 -mb-px" aria-label="Tabs">
+            <!-- Tabs worden door JavaScript hier ingevoegd -->
+        </nav>
+    </div>
+
     <div class="bg-white p-6 rounded-lg shadow-md">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4"><input id="productSearchInput" type="text" placeholder="Zoek op productnaam..." class="p-2 border border-gray-300 rounded-lg"><select id="productSupplierFilter" class="p-2 border border-gray-300 rounded-lg"></select><select id="productCategoryFilter" class="p-2 border border-gray-300 rounded-lg"></select></div>
-        <div class="overflow-x-auto"><table class="w-full text-left"><thead><tr class="bg-gray-100"><th class="p-3">Titel</th><th class="p-3">Leverancier</th><th class="p-3">Categorie</th><th class="p-3">Verkoopprijs</th><th class="p-3">Status</th><th class="p-3 text-right">Acties</th></tr></thead><tbody id="productsTableBody"></tbody></table></div>
+        <!-- Filters (blijven ongewijzigd) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <input id="productSearchInput" type="text" placeholder="Zoek op productnaam..." class="p-2 border border-gray-300 rounded-lg">
+            <select id="productSupplierFilter" class="p-2 border border-gray-300 rounded-lg"></select>
+            <select id="productCategoryFilter" class="p-2 border border-gray-300 rounded-lg"></select>
+        </div>
+
+        <!-- Tabel voor de producten -->
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="p-3">Titel</th>
+                        <th class="p-3">Leverancier</th>
+                        <th class="p-3">Categorie</th>
+                        <th class="p-3 text-right">Inkoop</th>
+                        <th class="p-3 text-right">Verkoop</th>
+                        <th class="p-3 text-right">Marge</th>
+                        <th class="p-3 text-center">Status</th>
+                        <th class="p-3 text-right">Acties</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTableBody">
+                    <!-- Productrijen worden door JavaScript hier ingevoegd -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Paginatie-container -->
+        <div id="pagination-container" class="mt-4 flex justify-between items-center">
+            <!-- Paginatieknoppen worden door JavaScript hier ingevoegd -->
+        </div>
     </div>
 </div>

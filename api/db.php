@@ -3,10 +3,10 @@
 
 // --- DATABASE CONFIGURATIE ---
 // Pas deze gegevens aan naar jouw lokale MySQL-omgeving.
-$host = 'x';       // of 'localhost'
-$db   = 'x'; // De databasenaam uit je .sql bestand
-$user = 'x';            // Standaard gebruikersnaam voor lokale XAMPP/MAMP
-$pass = 'x';                // Standaard wachtwoord is leeg voor lokale XAMPP/MAMP
+$host = '192.168.178.10';       // of 'localhost'
+$db   = 'SIT-Subscription-manager'; // De databasenaam uit je .sql bestand
+$user = 'sit_db_web_user';            // Standaard gebruikersnaam voor lokale XAMPP/MAMP
+$pass = 'April@2003!';                // Standaard wachtwoord is leeg voor lokale XAMPP/MAMP
 $charset = 'utf8mb4';
 
 // Data Source Name (DSN)
